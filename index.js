@@ -225,12 +225,13 @@ artists[8].name = "Vincent Van Gogh";
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(list, index) {
+    const name = list[index].name;
+    return `The artist at index ${index} is ${name}.`;
   }
-  
+  console.log(getArtistByIndex(artists, 7))
   /**
-
+artists array, desired number in the array []
 
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -240,21 +241,27 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(list, index) {
+  const deleted = list.splice(index, 1);
+    // .splice(index, how many elements)
+  return deleted;
   }
-  
+  console.log(removeArtist(artists, 5));
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(artistArray) {
+  const names = [];
+  for (let i = 0; i < artistArray.length; i++) {
+    if (artistArray[i].paintings > 100) {
+      names.push(artistArray[i].name);
+    }
   }
-
+  return names;
+}
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -265,12 +272,20 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
-
+function addArtist(artistArray) {
+  const me = {
+    id: 21,
+    name: "Stephanie Gatt",
+    years: "84 - current day",
+    genre: "Web Design",
+    nationality: "USA",
+    bio: "I don't have time for this"
+  };
+  
+  artistArray.push(me);
+}
+addArtist(artists);
+console.log(artists);
 
 
 
