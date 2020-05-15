@@ -1,0 +1,34 @@
+.a() {
+	font-family: @main-font;
+	color: @main-text;
+	text-decoration: none;
+	font-weight: none;
+}
+
+.p() {
+	font-size: 1rem;
+	color: @main-color;
+	font-family: @main-font;
+}
+
+// parametric mixins begin
+
+.display-flex(@justify:flex-start, @align:stretch, @wrap:no-wrap, @direction:row) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-wrap: @wrap;
+    flex-direction: @direction;
+}
+
+.button(@bg-color, @color, @size, @width) {
+    background-color: @bg-color;
+    border: none;
+    color: @color;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: @size;
+    width: @width;
+    border-radius: 8px;
+}
