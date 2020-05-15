@@ -4,6 +4,11 @@
     background-image: url(../assets/Alfred-Sisley.jpg);
     .display-flex(center, center, @direction:column);
 
+    @media @phone {
+        margin: 0;
+        height: vh;
+    }
+
     h1 {
         margin: 8%;
         text-align: center;
@@ -21,6 +26,9 @@ hr {
 .artists-container {
     .display-flex(center, center);
 
+    @media @phone {
+        .display-flex(center,center, @direction:column);
+    }
     .artist-1 { // opens class
         width: 35%;
         margin: 5%;

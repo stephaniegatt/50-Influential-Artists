@@ -132,6 +132,7 @@ a {
   color: #22223b;
 }
 header {
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,6 +154,12 @@ header nav {
   align-items: center;
   flex-wrap: no-wrap;
   flex-direction: column;
+}
+@media ( max-width: 500px )  {
+  .title-container {
+    margin: 0;
+    height: vh;
+  }
 }
 .title-container h1 {
   margin: 8%;
@@ -178,6 +185,15 @@ hr {
   align-items: center;
   flex-wrap: no-wrap;
   flex-direction: row;
+}
+@media ( max-width: 500px )  {
+  .artists-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: no-wrap;
+    flex-direction: column;
+  }
 }
 .artists-container .artist-1 {
   width: 35%;
