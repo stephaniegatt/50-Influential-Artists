@@ -1,0 +1,59 @@
+.title-container {
+    margin: 5% 20%;
+    height: 50rem;
+    background-image: url(../assets/Alfred-Sisley.jpg);
+    .display-flex(center, center, @direction:column);
+
+    h1 {
+        margin: 8%;
+        text-align: center;
+    }
+
+    button {
+        .button(@secondary-color, @main-font, 2rem, 25%)
+    }
+}
+
+hr {
+    width: 80%;
+}
+
+.artists-container {
+    .display-flex(center, center);
+
+    .artist-1 { // opens class
+        width: 35%;
+        margin: 5%;
+        // .display-flex(center, center);
+
+        img { //opens img
+            padding-top: 1rem;
+        } // closes img
+
+        a { //opens a
+            padding-top: 1rem;
+        } //closes a
+
+        .bio { //opens bio
+            padding-top: 1rem;
+        } //closes bio
+    } //closes bio   
+
+    .artist-2 {
+        width: 35%;
+        margin: 5%;
+        // .display-flex(center, center);
+
+        img {
+            padding-top: 1rem;
+        }
+
+        a {
+            padding-top: 1rem;
+        }
+
+        .bio {
+            padding-top: 1rem;
+        }   
+    }
+}
